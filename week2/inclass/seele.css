@@ -36,29 +36,21 @@ main{
     background-color: rgb(178, 165, 100);
 }
 
-@media (min-width: 800px) {
-    nav ul{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    nav ul li{
-        border:none;
-        padding:0;
-    }
-
-    .red-text {
-        color: rgb(170,25,20);
-    }
-    
-    .green-text {
-        color: rgb(25,150,30);
+@media (min-width: 600px) {
+    .HG-text,
+    .HI3-text,
+    .HSR-text {
+        font-style:inherit;
+        color: rgb(22, 105, 221);
     }
 
 }
 
-@media (min-width: 1000px){
-    .red-text,
-    .green-text {
-        color: rgb(20, 25, 170);
+@media (min-width: 900px){
+    .HG-text,
+    .HI3-text,
+    .HSR-text {
+        font-style:oblique;
+        color: rgb(221, 22, 22);
     }
 }

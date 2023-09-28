@@ -31,9 +31,9 @@ nav{
 
 
 main{
-    color: rgb(15,15,15);
+    color: rgb(230, 64, 114);
     text-decoration: none;
-    background-color: rgb(178, 165, 100);
+    background-color: rgb(50, 55, 73);
 }
 
 @media (min-width: 600px) {
@@ -41,7 +41,7 @@ main{
     .HI3-text,
     .HSR-text {
         font-style:inherit;
-        color: rgb(22, 105, 221);
+        color: rgb(28, 39, 55);
     }
 
 }

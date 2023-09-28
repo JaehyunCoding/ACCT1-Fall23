@@ -40,10 +40,10 @@ main{
     .HSR-text {
         font-style:inherit;
         color: rgb(71, 13, 31);
-        text-decoration: none;
     }
     main{
         background-color: beige;
+        text-decoration: none;
     }
     nav li{
         display: inline-block;
@@ -61,6 +61,7 @@ main{
     }
     main{
         background-color: rgb(215, 59, 158);
+        text-decoration: none;
     }
     nav li{
         display:inline-table;

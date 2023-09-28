@@ -30,9 +30,8 @@ main{
     color: rgb(230, 64, 114);
     text-decoration: line-through;
     background-color: rgb(38, 47, 78);
-    nav {
-        display:inline-flex;
-    }
+    display:inline-flex;
+    flex-direction: column;
 }
 
 @media (min-width: 600px) {
@@ -46,8 +45,9 @@ main{
     main{
         background-color: beige;
     }
-    nav {
+    nav li{
         display: inline-block;
+        flex-direction: row;
     }
 
 }
@@ -62,7 +62,8 @@ main{
     main{
         background-color: rgb(215, 59, 158);
     }
-    nav {
+    nav li{
         display:inline-table;
+        flex-direction:column-reverse;
     }
 }

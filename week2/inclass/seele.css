@@ -42,7 +42,10 @@ main{
     .HSR-text {
         font-style:inherit;
         color: rgb(28, 39, 55);
+    }
+    main{
         background-color: beige;
+        text-decoration: line-through;
     }
 
 }

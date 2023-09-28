@@ -41,7 +41,7 @@ main{
     .HI3-text,
     .HSR-text {
         font-style:inherit;
-        color: rgb(28, 39, 55);
+        color: rgb(230, 64, 114);
     }
     main{
         background-color: beige;

@@ -1,0 +1,41 @@
+body {
+    text-align: center;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(92, 92, 202);
+}
+
+#btnImage {
+    width: 100px;
+    height: 100px;
+}
+
+#largeImage {
+    margin: 30px;
+    width: 500px;
+}
+
+#chName {
+    font-size: medium;
+    font-style: italic;
+    color:aliceblue
+}
+
+.sw {
+    background-color: rgb(138, 138, 203);
+}
+
+.sn {
+    background-color: rgb(79, 46, 142);
+}
+
+.sx {
+    background-color: rgb(191, 65, 65);
+}
+
+.hr {
+    background-color: rgb(102, 182, 204);
+}

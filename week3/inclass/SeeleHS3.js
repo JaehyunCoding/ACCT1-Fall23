@@ -9,22 +9,26 @@ let chName = document.getElementById("chName")
 let change01 = function () {
     largeImage.src = "SwallowtailPhantasm.webp"
     chName.innerText = "Swallowtail Phantasm"
-    bgColor.classList.toggle("sw")
+    bgColor.className = ""
+    bgColor.classList.add("sw")
 }
 let change02 = function () {
     largeImage.src = "Stygian_Nymph.webp"
     chName.innerText = "Stygian Nymph"
-    bgColor.classList.toggle("sn")
+    bgColor.className = ""
+    bgColor.classList.add("sn")
 }
 let change03 = function () {
     largeImage.src = "Starchasm_Nyx.webp"
     chName.innerText = "Starchasm Nyx"
-    bgColor.classList.toggle("sx")
+    bgColor.className = ""
+    bgColor.classList.add("sx")
 }
 let change04 = function () {
     largeImage.src = "Herrscher_of_Rebirth.webp"
     chName.innerText = "Herrscher of Rebirth"
-    bgColor.classList.toggle("hr")
+    bgColor.className = ""
+    bgColor.classList.add("hr")
 }
 // I tried to change the background-color by characters but once clicking the colors, the color doesn't change according to the characters...
 

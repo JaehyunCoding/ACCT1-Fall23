@@ -9,7 +9,8 @@ function preload(){
 function setup() {
     let myCanvas = createCanvas(600, 600)
     myCanvas.parent("RedAlertHolder")
-    colorMode(HSB, TWO_PI, 1, 1)
+    colorMode(HSB, TWO_PI, 1, 1, 1)
+    // 마지막 1은 0-1 내의 alpha의 파라미터임...
     imageMode=(CENTER)
 }
 

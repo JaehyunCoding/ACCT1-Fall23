@@ -1,14 +1,3 @@
-// Create an animation with at least two moving shapes - one moving in a repeated motion (e.g. a pendulum or a rotating planet) and the other performing a movement after a predetermined interval of time has passed. You can add more than 2 shapes if you like.
-
-// use trigonometric function to describe repeated motion
-// use time function to calculate the interval
-// de-synchronize the to movements from each other to create complex motion rhythm
-// Try to use randomness and/or Perlin noise to create organic shapes.
-
-// Documentation:
-
-// In the process of your work capture the images of the iterations - at least 6 in total. Create a webpage and write a sentence or two for each image explaining the evolution of work. Embed your sketch from openProcessing or P5js to the webpage.
-
 let bgImage
 let y=0
 let yOff = 0

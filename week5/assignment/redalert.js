@@ -27,13 +27,24 @@ function draw(){
 
     background(bgImage)
 
-    stroke(PI*0.25,1,1)
+    stroke(TWO_PI,0,1)
     strokeWeight(5)
     line(0, y, width, y);
     y++;
     if (y > height) {
     y = 0;
     }
+
+    strokeWeight(1)
+    stroke(PI*1/3, 0.75, 0.8)
+    fill(PI*1/3, 0.75, 0.8)
+
+    push()
+    translate(width*0.5, height*0.5)
+    let angle = millis()*0.001*(1*0.25 + 1)
+    rotate(sin(angle)*TWO_PI)
+    arc(0,0,400,400,PI,PI*1.5)
+    pop()
 
     
 }

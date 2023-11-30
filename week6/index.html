@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+    
+    <style>
+        html,body {
+            margin:0;
+            /* 만일 마진 0 없이 걍 페이지를 연다면 스크롤이 생긴다. 왜냐하면 디폴트는 원래 창 위에 자그마한 마진이 들어있어서 그렇다. 프라모델의 찌꺼기처럼. 그걸 니퍼로 잘라냈다고  생각하면 된다. */
+            /* Border밖이 margin, 내부와 콘텐츠 사이는는 padding */
+            padding: 0;
+            height: 100%;
+            background-color: black;
+        }
+        body, main {
+            display:flex;
+            /* 플렉스는 굉장히 움직이게 쉽도록 만든다 */
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+    
+    <title>Rotation and Timing</title>
+</head>
+<body>
+    <!-- <h1>This is my sketch?</h1> -->
+    <!-- <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor praesentium iste, corrupti aliquid ab voluptate ipsam sit voluptatem amet, reprehenderit, animi deserunt laborum excepturi asperiores repudiandae ut quos obcaecati voluptas?</p> -->
+    
+    <!-- <section id="sketchHolder1"></section>
+    <script src="sketch1.js"></script> -->
+
+    <section id="sketchHolder2"></section>
+    <!-- 스케치의 순서도 중요하니 신경쓸 것! -->
+    <script src="particle.js"></script>
+    <script src="sketch.js"></script>
+
+</body>
+</html>

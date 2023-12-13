@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scary Peach</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #7ca7dd;
+        }
+        .processing-code {
+            background-color: #74f387;
+            border-left: 5px solid #00979c;
+            padding: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scary Peach</h1>
+
+    <div class="video-container">
+        <video width="640" height="360" controls>
+            <source src="processing1206.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="processing-code">
+        
+        Attached is the Processing Code for Scary Peach
+
+        import processing.serial.*;
+
+        Serial myConnection;
+        float radius = 20;
+        boolean backGrnd = true;
+        color bClr = color(0,0,0);
+        String incomingValue = "";
+        // "" Should use Double Quote! Also When you run it please stop the serial Monitor on IDE
+        PImage myImage;
+        
+        int currButton = 0;
+        int prevButton = 0;
+        
+        
+        void setup(){
+          size(800,600);
+          myImage = loadImage("Apeach01.png");
+          printArray(Serial.list());
+          myConnection = new Serial(this,"/dev/cu.SLAB_USBtoUART", 9600);
+          myConnection.bufferUntil('\n');
+        }
+        
+        void draw(){
+          // when buttoncomes from 0 to 1, using comparison
+          if(currButton > prevButton){
+            backGrnd = true;
+          }
+          else if(currButton < prevButton){
+            backGrnd = false;
+          }
+          
+          if(backGrnd){
+          background(bClr);
+          }
+          else{
+            background(255);
+          }
+          float imageSize = map(radius, 0, width, 50, 300);
+          myImage.resize(int(imageSize), int(imageSize));
+          image(myImage, width * 0.5 - imageSize * 0.5, height * 0.5 - imageSize * 0.5);
+          //fill(255, 0, 0);
+          //circle(width*0.5, height*0.5, radius);
+          
+          prevButton = currButton;
+        }
+        
+        void serialEvent(Serial conn){
+          incomingValue = conn.readString();
+          //println(incomingValue);
+          
+          String [] values = split(trim(incomingValue), ',');
+          //printArray(values);
+          if(values.length == 2){
+            radius = map(float(values[0]), 0, 4095, 0, width);
+            // converting scale by 4095 to scale by width
+            //backGrnd = boolean(int(values[1]));
+            
+            currButton = int(values[1]);
+            
+          }
+        }
+        
+          
+    </div>
+</body>
+</html>

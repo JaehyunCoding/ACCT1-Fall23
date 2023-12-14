@@ -78,8 +78,8 @@
         ArrayList<PVector> missiles;
         boolean specialAttack = false;
         
-        PVector enemy; // 적(빨간 원)의 위치
-        float enemySpeedX, enemySpeedY; // 적의 움직임 속도
+        PVector enemy; // Red Ball Location
+        float enemySpeedX, enemySpeedY; // Red Velocity
         boolean enemyHitBySpecialAttack = false;
         
         boolean[] currentButtonState = {false, false, false};
@@ -107,8 +107,8 @@
             newGunHitSound = new SoundFile(this, "Cooking.wav");
         
             enemy = new PVector(random(width), random(height));
-            enemySpeedX = random(2, 4); // X축 속도
-            enemySpeedY = random(2, 4); // Y축 속도
+            enemySpeedX = random(2, 4); // X Axis Velocity
+            enemySpeedY = random(2, 4); // Y Axis Velocity
         
             frameRate(60);
         }
@@ -197,7 +197,7 @@
                 if (dist(bullet.x, bullet.y, enemy.x, enemy.y) < 15) {
                     if (!enemyHitBySpecialAttack && !newGunHitSound.isPlaying()) {
                         stopAllSoundsExcept(newGunHitSound);
-                        newGunHitSound.play(); // 기관총 피격 시 새 사운드 재생
+                        newGunHitSound.play(); // New Sound Play When Hit By Bullets
                     }
                     bullets.remove(i);
                     resetEnemy();
@@ -213,7 +213,7 @@
                 if (dist(missileCenterX, missileCenterY, enemy.x, enemy.y) < 15) {
                     if (!enemyHitBySpecialAttack && !newMissileHitSound.isPlaying()) {
                         stopAllSoundsExcept(newMissileHitSound);
-                        newMissileHitSound.play(); // 미사일 피격 시 새 사운드 재생
+                        newMissileHitSound.play(); // New Sound Play When Hit By Missiles
                     }
                     missiles.remove(i);
                     resetEnemy();
@@ -229,14 +229,14 @@
         }
         
         void triggerButtonAction(int buttonIndex) {
-            if (buttonIndex == 0) { // 필살기
+            if (buttonIndex == 0) { // Ultimate
                 specialAttack = true;
                 stopAllSounds();
                 specialAttackSound.play();
-            } else if (buttonIndex == 1) { // 미사일
+            } else if (buttonIndex == 1) { // Missile
                 missiles.add(new PVector(planeX + planeImage.width / 2, height - planeImage.height));
                 missileSound.play();
-            } else if (buttonIndex == 2) { // 기관총
+            } else if (buttonIndex == 2) { // Bullet
                 bullets.add(new PVector(planeX + planeImage.width / 2, height - planeImage.height));
                 gunSound.play();
             }
